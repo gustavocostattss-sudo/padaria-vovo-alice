@@ -10,8 +10,9 @@
 <meta property="og:title" content="Padaria Vovó Alice – Pão quentinho e encomendas">
 <meta property="og:description" content="Escolha seus favoritos e peça pelo WhatsApp. Av. Portugal, 1801 – Santa Amélia, BH.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="fotos/cesta.jpg">
+<meta property="og:image" content="fotos/logo-selo.jpg">
 <meta name="theme-color" content="#4A2C1A">
+<link rel="icon" type="image/png" href="fotos/icone.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600..800;1,9..144,600..800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -87,8 +88,9 @@ button{font-family:inherit;cursor:pointer}
 .polaroid img{display:block;width:100%;object-fit:cover;border-radius:2px}
 .legenda{position:absolute;left:0;right:0;bottom:9px;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:25px;line-height:1;color:#4A2C1A}
 .fita{position:absolute;top:-14px;left:50%;width:100px;height:28px;margin-left:-50px;background:rgba(227,169,59,.62);transform:rotate(-4deg)}
-.carimbo{position:absolute;width:128px;height:128px;border-radius:50%;background:#A8322A;color:#FFFFFF;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 10px 24px rgba(122,34,28,.35);transform:rotate(-12deg)}
-.carimbo span{width:110px;height:110px;border-radius:50%;border:2px dashed rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;font-family:'Caveat',cursive;font-weight:700;font-size:27px;line-height:.95}
+.marca-logo{width:60px;height:60px;border-radius:50%;object-fit:cover;display:block;background:#FCFAD3;border:2px solid #E1C9A3;flex-shrink:0}
+.selo-logo{position:absolute;width:34%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#FCFAD3;border:6px solid #FFFFFF;box-shadow:0 14px 32px rgba(74,44,26,.28);transform:rotate(-8deg)}
+.selo-logo img{width:100%;height:100%;object-fit:cover;display:block}
 .bilhete{position:absolute;background:#FFFDF8;border-radius:10px;padding:14px 18px;box-shadow:0 12px 28px rgba(74,44,26,.18);display:flex;gap:12px;align-items:center;transform:rotate(2deg)}
 .bilhete b{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:40px;line-height:1}
 .bilhete small{font-size:13.5px;color:#6E4A33;font-weight:600}
@@ -171,7 +173,8 @@ button{font-family:inherit;cursor:pointer}
 .painel-fim{padding:16px 22px 22px;border-top:2px dashed #E1C9A3;display:flex;flex-direction:column;gap:10px}
 .painel-fim p{margin:0;font-size:14px;color:#6E4A33;line-height:1.45}
 .continuar{min-height:48px;border:2px solid #4A2C1A;border-radius:999px;background:transparent;color:#4A2C1A;font-weight:800;font-size:16px}
-@media (max-width:760px){.nav{display:none}.marca-sub{display:none}.cab{flex-wrap:nowrap}.marca svg{width:40px;height:40px}.marca-nome{font-size:31px}.cab .btn-pequeno{min-height:44px;padding:0 14px;font-size:14.5px;gap:6px}.toalha-card{padding:30px 22px}.carimbo{width:104px;height:104px}.carimbo span{width:88px;height:88px;font-size:22px}}
+@media (max-width:760px){.nav{display:none}.marca-sub{display:none}.cab{flex-wrap:nowrap}.marca-logo{width:46px;height:46px}.marca-nome{font-size:31px}.cab .btn-pequeno{min-height:44px;padding:0 14px;font-size:14.5px;gap:6px}.toalha-card{padding:30px 22px}.selo-logo{border-width:4px}.marca-nome,.cab .btn-pequeno{white-space:nowrap}}
+@media (max-width:520px){.legenda{font-size:21px}.bilhete{padding:9px 12px;gap:8px;bottom:-3% !important;right:-4% !important}.bilhete b{font-size:28px}.bilhete small{font-size:11.5px}.bilhete svg{width:12px;height:12px}}
 html{scroll-behavior:smooth}
 </style>
 </head>
@@ -183,7 +186,7 @@ html{scroll-behavior:smooth}
 <header class="topo">
 <div class="wrap cab">
 <a class="marca" href="#topo">
-<svg width="48" height="48" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#A8322A"></circle><circle cx="22" cy="22" r="18.5" fill="none" stroke="#F6D9A0" stroke-width="1.2" stroke-dasharray="2.5 2.5"></circle><path d="M22 34V13" stroke="#F6D9A0" stroke-width="2.4" stroke-linecap="round"></path><path d="M22 18c-4 0-6-3-6-6 4 0 6 3 6 6zm0 0c4 0 6-3 6-6-4 0-6 3-6 6zm0 6c-4 0-6-3-6-6 4 0 6 3 6 6zm0 0c4 0 6-3 6-6-4 0-6 3-6 6zm0 6c-4 0-6-3-6-6 4 0 6 3 6 6zm0 0c4 0 6-3 6-6-4 0-6 3-6 6z" fill="#F6D9A0"></path></svg>
+<img class="marca-logo" src="fotos/logo-topo.jpg" alt="Logo da Padaria Vovó Alice">
 <span><span class="marca-nome">Vovó Alice</span><span class="marca-sub">Padaria · Confeitaria · Restaurante</span></span>
 </a>
 <nav class="nav" aria-label="Menu">
@@ -219,10 +222,10 @@ html{scroll-behavior:smooth}
 </div>
 <div class="polaroid" style="left: 0; bottom: 3%; width: 44%; transform: rotate(-6deg)">
 <div class="fita" style="transform: rotate(5deg)"></div>
-<img loading="lazy" src="fotos/pao-de-queijo.jpg" alt="Pães de queijo com xícara de café" style="aspect-ratio: 1 / 1">
+<img src="fotos/pao-de-queijo.jpg" alt="Pães de queijo com xícara de café" style="aspect-ratio: 1 / 1">
 <div class="legenda">pão de queijo</div>
 </div>
-<div class="carimbo" style="left: 4%; top: 6%"><span>feito<br>na hora!</span></div>
+<div class="selo-logo" style="left: 0; top: 1%"><img src="fotos/logo-selo.jpg" alt="Logo da Padaria Vovó Alice"></div>
 <div class="bilhete" style="right: 0; bottom: 6%">
 <b>4,4</b>
 <div>
